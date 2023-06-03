@@ -3,8 +3,20 @@ Write an algorithm to change a string into a "goofy" version.
 """
 from tkinter import messagebox, simpledialog, Tk
 
-
 if __name__ == '__main__':
+    window = Tk()
+    window.withdraw()
+    name = simpledialog.askstring('', "Give me your name")
+    total_str = ""
+    name_list = name.rstrip()
+    for i in range(len(name)):
+        if (i % 2 == 0):
+            total_str += name_list[i].upper()
+        else:
+            total_str += name_list[i]
+
+    print(total_str)
+
     # TODO)
     #  1. Ask the user to enter their name.
     #  2. Use a loop to alternately modify each character of the name into
